@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Page Title</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <script type="module">
+        // import './modules/1.js'; 单纯的引入js
+        import {a,b,c} from './modules/1.js';
+        import {aa as aaa,bb as bbb,cc as ccc} from './modules/2.js';
+        import * as mod from './modules/2.js';
+        import pi from './modules/3.js'
+        import {name,age} from './modules/3.js'
+        import modules,{x,y,sum,show} from './modules/4.js'
+        import {xx,yy} from './modules/6.js'
+        console.log(a,b,c);
+        console.log(aaa,bbb,ccc);
+        console.log(mod);
+        console.log(pi,name,age)
+        show();
+        sum();
+        let p1 = new modules.Person('张三',18);
+        console.log(p1.showName());
+        setTimeout(()=>{
+            console.log(xx,yy);
+        },2000)
+        import ('https://code.jquery.com/jquery-1.12.4.min.js').then(res=>{
+            $(function(){
+                $('body').css({background: 'gray'})
+            })
+        })
+    </script>
+</head>
+
+<body>
+
+</body>
+
+</html>
